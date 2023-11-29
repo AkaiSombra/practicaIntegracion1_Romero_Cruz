@@ -17,7 +17,7 @@ import chatRouter from './routes/chat.routes.js'
 import { __dirname, __filename } from './utils.js'
 
 const PORT = 8080
-const MONGOOSE_URL = 'mongodb+srv://SombraAkai:alcon005@cluster0.nqkm3pp.mongodb.net/videogameShop?retryWrites=true&w=majority'
+const MONGOOSE_URL = 'mongodb+srv://SombraAkai:1234@cluster0.nqkm3pp.mongodb.net/videogameShop?retryWrites=true&w=majority'
 
 const app = express()
 
