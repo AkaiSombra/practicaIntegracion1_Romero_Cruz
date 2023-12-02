@@ -46,11 +46,11 @@ router.post('/', async (req, res) => {
 
 router.put('/:pid', async (req, res) => {  
     try {
-        const pId = parseInt(req.params.pid)
+        const pId = req.params.pid
         const productUpdate = req.body
 
         const updatedProduct = await productsModel.updateOne({ _id: pId}, productUpdate)
-        res.status(200).send(`El producto con ID:${pId} ha sido actualizado correctamente, ${updatedProduct}`)
+        res.status(200).send(`El producto con ID:${pId} ha sido actualizado correctamente`)
       } catch (error) {
         res.status(400).send(error.message)
       }
@@ -58,7 +58,7 @@ router.put('/:pid', async (req, res) => {
 
 router.delete('/:pid', async (req, res) => {
     try{
-        const pId = parseInt(req.params.pid)
+        const pId = req.params.pid
 
         const deletedProduct = await productsModel.deleteOne( {_id: pId})
 
